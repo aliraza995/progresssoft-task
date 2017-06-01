@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="ps">
+
+<head>
+
+    <title>Progress soft task</title>
+
+    <!-- Angular JS -->
+    <script src="app/assets/js/angular/angular.min.js"></script>
+
+    <!-- Angular Services -->
+    <script type="text/javascript" src="app/components/Upload/uploadService.js"></script>
+    <script type="text/javascript" src="app/components/Result/resultService.js"></script>
+
+    <!-- Angular Controllers -->
+    <script type="text/javascript" src="app/mainController.js"></script>
+    <script type="text/javascript" src="app/components/Upload/uploadController.js"></script>
+    <script type="text/javascript" src="app/components/Result/resultController.js"></script>
+
+    <!-- Angular libraries -->
+    <script type="text/javascript" src="app/assets/js/angular/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="app/assets/js/angular/angular-animate.js"></script>
+    <script type="text/javascript" src="app/assets/js/angular/angular-ui-bootstrap.js"></script>
+    <script type="text/javascript" src="app/assets/js/angular/angular-base64.min.js"></script>
+    <script type="text/javascript" src="app/assets/js/angular/angular-table-export.js"></script>
+    <script type="text/javascript" src="app/assets/js/angular/angular-dialog.min.js"></script>
+
+
+    <script src="app/assets/js/moment/moment.min.js"></script>
+    <script src="app/assets/js/ace/ace.js"></script>
+
+    <!-- Angular Resource library for rest API-->
+    <script type="text/javascript" src="app/assets/js/angular/angular-resource.min.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="app/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+
+    <!-- SideMenu CSS -->
+    <link href="app/assets/css/sidemenu/sideMenu.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="app/assets/css/application.css" rel="stylesheet">
+    
+    <!-- custom CSS -->
+    <link href="app/assets/css/custom.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="wrapper">
+    
+    <!-- sidebar menu -->
+	<div id="MainMenu" class="sidebar hidden-print" role="navigation" >
+	        
+			<div id="side-menu" class="list-group panel nav nav-sidebar active" >
+				<!--upload menu item start -->
+				<a id="menu-upload" href="#upload" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">
+				<i class="fa fa-dashboard fa-fw upload-icn"></i> <span >Upload</span></a>
+				<div class="collapse" id="upload"></div>
+				<!--upload menu item end -->
+				
+			</div>
+	
+	</div>
+	<!-- end sidebar menu -->
+    <!-- this div will update on every page load-->
+    <div id="page-wrapper" class="margin-print" ui-view style="overflow-y: auto;overflow-x: hidden; top: 50px;">
+
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- jQuery -->
+<script src="app/assets/js/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="app/assets/js/bootstrap/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+<script src="app/assets/js/application.js"></script>
+
+<!-- Angular Route -->
+<script src="app/app.route.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<h1>Upload Deal Data</h1>
+
+<div class="page-border">
+	<div class="form-group col-sm-12">
+	<div class="form-group col-sm-12">
+		<div class="col-sm-6 col-md-6">
+        	<label><span>File (in CSV Format)</span> <span required></span></label>
+            <input type="file" multiple id="uploadFile" on-read-file="getContent($file)" />
+        </div>
+	</div>
+
+	<div class="form-group col-sm-12">	
+    	<div class="col-sm-12 col-md-12">
+			<button id="importBtn" type="button" class="btn btn-primary top-buffer-15" ng-click="import()" ng-disabled="dealFile == null">Import</button>
+		</div>
+	</div>
+
+	<div class="form-group col-sm-12 ">
+		<p class="error" ng-show="error != null">{{error}}</p>
+		<p class="success" ng-show="success != null">{{success}}</p>
+	</div>
+
+</div>

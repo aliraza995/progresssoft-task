@@ -1,0 +1,54 @@
+.nav-sidebar > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.nav-sidebar  > a, 
+.list-group-item,
+.nav-sidebar  > panel, 
+.nav-sidebar  > list-group,
+.nav-sidebar  > list-group-item,
+#side-menu
+{
+	text-decoration: none;
+    background-color: transparent;
+}
+.nav-sidebar  > a.active,
+  {
+  background-color: #239447;
+}
+
+.nav-sidebar  > a:hover,
+a.list-group-item-success:focus
+  {
+  background-color: #555753;
+}
+
+.collapse.in {
+	background: #404650;
+}
+
+#side-menu .list-group-item {
+	border: none;
+}
+#side-menu .list-group-item:first-child {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+#side-menu .list-group-item:last-child {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+#side-menu a {
+	color: #fff !important;
+	outline: none;
+}
+#side-menu div a:active,
+#side-menu div a:hover {
+	text-decoration: underline;
+	background-color: transparent;
+}
+a.list-group-item:hover,
+a.list-group-item:focus {
+	background-color: transparent;
+}

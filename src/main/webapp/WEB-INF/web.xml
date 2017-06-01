@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+    <display-name>Progresssoft Task</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:spring-webapp.xml
+            classpath:spring-cxf.xml
+        </param-value>
+    </context-param>
+    <context-param>
+        <param-name>initializeContextOnStartup</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <!-- Avoids error in Tomcat because exposing webapp root is not supported. -->
+        <param-name>log4jExposeWebAppRoot</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>log4jConfiguration</param-name>
+        <param-value>file:///${sys:catalina.home}/conf/log4j2-progresssoft.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>cxf</servlet-name>
+        <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cxf</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+</web-app>
